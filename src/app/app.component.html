@@ -3,7 +3,8 @@
     <div class="col-md-12">
       <app-header (featureSelected) = "onNavigate($event)"></app-header>
       <app-recipes *ngIf = "loadedFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf = "loadedFeature !== 'recipe'"></app-shopping-list>
+      <app-shopping-list *ngIf = "loadedFeature === 'shopping-list'"></app-shopping-list>
     </div>
   </div>
+ 
 </div>
