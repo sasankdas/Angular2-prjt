@@ -22,7 +22,12 @@ constructor(private route : ActivatedRoute, private recipeService : RecipeServic
 } )
 }
 onSubmit(){
-  console.log(this.recipeForm); 
+  
+ if(this.editMode){
+   this.recipeService.updateRecipe(this.id, this.recipeForm.value);
+  }else{
+    this.recipeService.addRecipe(this.recipeForm.value);
+  }
 }
 
 onAddIngredient(){
