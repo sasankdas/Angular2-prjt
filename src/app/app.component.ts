@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   loadedFeature = 'recipe';
+ngOnInit(){
+firebase.initializeApp({
+apiKey: "AIzaSyBWaFvLz4sNN68kQCMplEEtjHa9cf7WKHQ",
+authDomain: "ng-recipe-book-9c4f1.firebaseapp.com",
+})
+}
+
+
   onNavigate(feature : string){
 this.loadedFeature = feature; 
   }
