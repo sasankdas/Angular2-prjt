@@ -22,6 +22,8 @@ getToken(){
     return this.token;
 
 }
-
+isAuthenticated(){
+    return this.token != null;
+}
 
 }
