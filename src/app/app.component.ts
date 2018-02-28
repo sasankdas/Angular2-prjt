@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
 
 @Component({
@@ -6,7 +6,7 @@ import * as firebase from 'firebase';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   loadedFeature = 'recipe';
 ngOnInit(){
 firebase.initializeApp({
@@ -16,7 +16,7 @@ authDomain: "ng-recipe-book-9c4f1.firebaseapp.com",
 }
 
 
-  onNavigate(feature : string){
+onNavigate(feature : string){
 this.loadedFeature = feature; 
   }
 }
