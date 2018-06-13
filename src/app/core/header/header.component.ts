@@ -14,6 +14,10 @@ export class HeaderComponent{
 constructor(private dataStorageService : DataStorageService,
 private authService :AuthService){}
 
+isAuth() {
+  return this.authService.isAuthenticated();
+}
+
 onSaveData(){
 
 this.dataStorageService.storeRecipes().subscribe(
